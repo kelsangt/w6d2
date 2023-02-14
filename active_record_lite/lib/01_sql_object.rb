@@ -5,18 +5,20 @@ require 'active_support/inflector'
 
 class SQLObject
   def self.columns
-    # ...
+    
   end
 
   def self.finalize!
   end
 
   def self.table_name=(table_name)
-    # ...
+    
   end
 
   def self.table_name
-    # ...
+    new_name = self.to_s 
+    new_name_two = new_name.downcase + "s"
+    @table_name = new_name_two
   end
 
   def self.all
